@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  </style>
+  <script>
+    .myfooter{
+  position: fixed;left: 0;bottom: 0;
+    }
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top" style="background-color:black">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand" href="#">
+          <!-- <img src="static/nrc.png" alt="NRC-Logo" style="width:50px;height:50px"> -->
+         <span style="font-size:25px"> <img src="static/nrc.png" alt="NRC-Logo" style="width:100px;height:100px"></span>
+         <!-- <a href="#"> <span style="font-size:25px"> EENRC-IITH </span> </a> -->
+        </div>
+      </div>
+
+      <ul class="nav navbar-nav navbar-header">
+        <li> <a href="#"> <span style="font-size:25px"> EENRC-IITH </span> </a> </li>
+        <!-- <li class="navbar-brand">
+        </li>
+        <li class="active"><a href="#"> EENRC-IITH</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{url_for('index')}}"> Home</a></li>
+        <li><a href="{{url_for('about')}}"> About IITH</a></li>
+        <li><a href="{{url_for('course')}}"> Courses</a></li>
+        <li><a href="{{url_for('studio')}}"> Studio </a></li>
+        <li><a href="{{url_for('contact')}}"> Contact Us </a></li>
+        <li><a href="#"> <span class="glyphicon glyphicon-search"></span> </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div style="margin-top:80px" class="container">
+    {% block content %}
+
+    {% endblock %}
+  </div>
+
+  <footer class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-bottom">
+    <div class="row">
+      <hr style="height:3px">
+      <div class="col-sm-12 col-md-6" style="text-align:right">
+        <p>2018 © EENRC-IITH </p>
+      </div>
+      <div class="col-sm-12 col-md-6" style="text-align:right;padding-right:40px">
+        <p> Developed by EENRC Team</p>
+      </div>
+    </div>
+  </nav>
+
+  </footer>
+</body>
+
+</html>
