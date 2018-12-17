@@ -1,5 +1,5 @@
 # nrc
-Install flask
+Install flask :
 sudo pip install flask
 
 Go to the directory and Run the app
